@@ -1,23 +1,41 @@
-# Brute-Force - Steghide
-## Uso
+# 🛠️ Brute-Force - Steghide
 
-1. Clona el repositorio que contiene el archivo:
-```bash
- git clone https://github.com/Jean25-sys/BruteForce-Steghide
+Este script realiza un ataque de fuerza bruta para extraer datos ocultos en imágenes compatibles con steghide usando un diccionario de contraseñas.
+
+## 📌 Uso
+
+### 1️⃣ Clonar el repositorio
+
+Para obtener el script, clona el repositorio con:
+
+```python
+git clone https://github.com/Jean25-sys/BruteForce-Steghide
 ```
- O tambien puedes copiar el codigo para pegar
 
-2. Una vez que tengas el script, le otorgas permiso de ejución con:
+O si prefieres, copia y pega el código en un archivo manualmente.
 
-```bash
+### 2️⃣ Otorgar permisos de ejecución
+
+Una vez descargado, dale permisos de ejecución al script:
+```
 chmod +x bf_steghide.sh
 ```
 
-3. Ejecuta el script pasandole la imagen como parámetro
+### 3️⃣ Ejecutar el script
 
-```bash
-./bf_steghide.sh 
+Pásale la imagen como parámetro para iniciar el ataque de fuerza bruta:
+```
+./bf_steghide.sh <imagen_oculta>
+```
+🔹 Ejemplo:
+```
+./bf_steghide.sh secreto.jpg
 ```
 
-4. Espera a que encuentre la contraseña correcta:
-   
+### 4️⃣ Esperar a que encuentre la contraseña
+El script probará todas las contraseñas del diccionario hasta encontrar la correcta. Si la extracción es exitosa, mostrará:
+![resultado](https://github.com/Jean25-sys/BruteForce-Steghide/blob/main/images/resultado.png)
+
+
+
+
