@@ -5,7 +5,7 @@
 # Verificar si se proporcionó un archivo como argumento
 if [ $# -eq 0 ]; then
     echo -e "\n============================================"
-    echo -e "  🛠️  Steghide Brute Force Script"
+    echo -e "    Steghide Brute Force Script"
     echo -e "============================================"
     echo -e "  Uso: $0 <archivo_imagen>"
     echo -e "  Ejemplo: $0 example.jpg"
@@ -46,15 +46,15 @@ while IFS= read -r password; do
 
     # Si la extracción es exitosa, mostrar la contraseña y el archivo extraído
     if [ $? -eq 0 ]; then
-        echo -e "\n\n✅ ¡Contraseña encontrada!: $password"
+        echo -e "\n\n[+] ¡Contraseña encontrada!: $password"
 
         # Comprobar si hay un archivo recién extraído
         extracted_file=$(ls -t | head -n 1)
 
         if [ -n "$extracted_file" ]; then
-            echo "🔍 Se ha encontrado un archivo oculto: $extracted_file"
+            echo "[+] Se ha encontrado un archivo oculto: $extracted_file"
         else
-            echo "⚠️ Archivo extraído, pero no se pudo determinar el nombre."
+            echo "[+] Archivo extraído, pero no se pudo determinar el nombre."
         fi
 
         exit 0
@@ -63,5 +63,5 @@ while IFS= read -r password; do
 done < "$WORDLIST"
 
 # Si no se encuentra ninguna contraseña válida
-echo -e "\n❌ No se encontró una contraseña válida."
+echo -e "\n[X] No se encontró una contraseña válida."
 exit 1
